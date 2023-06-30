@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <title>How to Sprout | Agroage Canada</title>
+  <meta name="description" content="Customizable and unique indoor home gardening kits, coming soon to Canada!">
+
+</head>
+
+<header>
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+<script type="module" src="https://unpkg.com/html-include-element"></script>
+<div id="curtain" style="background:white;height:100%;width: 100%;position: fixed;z-index: 9999;top: 0;left: 0;opacity:100%;" class="animated">
+      <div class="col-3" style="margin: auto;justify-content: center;display: flex;top: 50%;scale:2">
+        <div class="snippet" data-title=".dot-pulse">
+          <div class="stage">
+            <div class="dot-pulse"></div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<html-include src="/assets/common/header.html" no-shadow="true" mode="cors"></html-include>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" crossorigin="anonymous"></script>
+<script>
+  WebFont.load({
+	google: {
+	  families: ['Quicksand:400,700']
+	}
+  });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="/assets/common/scripts.js"></script>
+</header>
+
+<body onload="reveal()">
+
+<div class="cid-s48MCQYojq mylayout">
+<div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(250, 250, 250);"></div>
+
+<div id="healthmodal" class="modal" tabindex="-1">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" style="font-weight:bold">Disclaimer</h5>            
+			</div>
+			<div class="modal-body">
+				<p>Health Canada recommends that you cook your sprouts thoroughly before consumption to reduce your risk of contracting foodborne illnesses from sprouts, especially if you are in an at-risk age group. Click <a href="https://www.canada.ca/en/health-canada/services/food-safety-fruits-vegetables/sprouts.html" target="_blank">here</a> to read some more food safety tips for sprouting.</p>
+			</div>
+			<div class="modal-footer" style="justify-content:center">
+				<button type="button" class="btn btn-danger" data-dismiss="modal">I understand</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<section style="background:transparent">
+<div style="text-align:center">
+	<h1 style="display:inline;font-weight:bold">How to Sprout</h1>
+	<p class="align-center">Sprouts are germinated seeds that are harvested before they can grow roots and leaves. Select a variety from the dropdown list below.</p>
+	<hr/>
+	<select class="custom-select custom-select-lg mb-3 flex-width" style="font-weight:bold;border:0;text-align:center;background-color:rgba(255,255,255,0.75)">
+	  <option value="clover">Clover</option>
+	  <option value="lentil">Lentil</option>
+	  <option value="mung">Mung</option>
+	  <option value="mustard">Mustard</option>
+      <option value="rapini">Rapini</option>
+	</select>
+</div>
+
+<img hidden alt="Placeholder" style="border-radius:10px;margin:auto;max-width:25%" src="/shop/sprouting-kit/sprouting-kit.jpg">
+
+<div class="flex-width">
+<p style="font-weight:bold">Notes</p>
+<p id="sproutnotes">These mild sprouts are similar in taste and appearance to alfalfa sprouts. They expand a lot when sprouting, so be sure to use a large sprouting jar.</p>
+<p style="font-weight:bold">Instructions</p>
+<ol>
+	<li>Fill clean sprouting jar with cold water and soak <p id="sproutname" style="display:inline">clover seeds</p> for <p id="soaktime" style="display:inline">6 to 10 hours</p></li>
+	<li>Invert jar and shake to drain, then rest jar at slight angle in bowl or sink to allow excess water to drain</li>
+	<li>Keep jar out of direct sunlight</li>
+	<li>Rinse, invert, drain, and rest jar at slight angle at least twice a day for <p id="xdays" style="display:inline">4 to 6 days</p></li>
+	<li>Enjoy sprouts as soon as “tails” emerge or continue sprouting until desired size or taste is reached</li>
+	<li>Sprouts can be stored in paper towel-lined container in refrigerator for up to a week</li>
+</ol>
+<p style="font-weight:bold">Suggested uses</p>
+<ul id="sproutuses">
+	<li>Salads and sandwiches</li>
+	<li>Stir fries</li>
+	<li>Soups, slaws, and more</li>
+</ul>
+<p style="font-weight:bold">Reminders</p>
+<p style="display:inline">Click <a id="reminderurl" href="https://agroage.ca/learn/reminder/generate?category=sprout&plant=redclover">here</a> to generate and download a calendar reminder file to rinse your <p id="sproutname2" style="display:inline">clover seeds</p> twice daily.</p>
+</div>
+
+<script>
+$('#healthmodal').modal('show');
+
+$('.custom-select').change(function() {
+	switch ($('.custom-select').val()) {
+		case "clover": {
+			var sproutname = "clover seeds";
+			var soaktime = "6 to 10 hours";
+			var xdays = "4 to 6 days";
+			var sproutnotes = "These mild sprouts are similar in taste and appearance to alfalfa sprouts. They expand a lot when sprouting, so be sure to use a large sprouting jar.";
+			var sproutuses = [
+				"Salads and sandwiches",
+				"Stir fries",
+				"Soups, slaws, and more"
+			];
+			var reminderurl = "https://agroage.ca/learn/reminder/generate?category=sprout&plant=redclover";
+			break;
+		}
+		case "lentil": {
+			var sproutname = "lentils";
+			var soaktime = "6 to 12 hours";
+			var xdays = "2 to 5 days";
+			var sproutnotes = "Sprouted lentils are crunchy, refreshing, and easier to digest than regular lentils because sprouting reduces phytic acid.";
+			var sproutuses = [
+				"Sprouted lentil soups",
+				"Vegan sprouted lentil burgers",
+				"Salads and sandwiches",
+				"As a crunchy snack"
+			];
+			var reminderurl = "https://agroage.ca/learn/reminder/generate?category=sprout&plant=brownlentil";
+			break;
+		}
+		case "mung": {
+			var sproutname = "mung beans";
+			var soaktime = "6 to 8 hours";
+			var xdays = "3 to 6 days";
+			var sproutnotes = "Mung bean sprouts, popular in various Asian cuisines, may develop a pink hue if exposed to light, but this does not affect their edibility. The green hull or skin of mung bean sprouts can be eaten or removed, as it too does not affect edibility.";
+			var sproutuses = [
+				"Pho, a popular Vietnamese soup",
+				"Stir fries",
+				"Salads and sandwiches",
+				"As a crunchy snack"
+			];
+			var reminderurl = "https://agroage.ca/learn/reminder/generate?category=sprout&plant=mungbean";
+			break;
+		}
+		case "mustard": {
+			var sproutname = "mustard seeds";
+			var soaktime = "1 to 2 hours";
+			var xdays = "3 to 6 days";
+			var sproutnotes = "Brown mustard seeds become gel-like when sprouting and trap a lot of water in them. Ensure that you drain them very well after each rinse.";
+			var sproutuses = [
+				"Sprouted mustard condiment",
+				"Salads and sandwiches",
+				"Stir fries"
+			];
+			var reminderurl = "https://agroage.ca/learn/reminder/generate?category=sprout&plant=brownmustard";
+			break;
+		}
+		case "rapini": {
+			var sproutname = "rapini seeds";
+			var soaktime = "2 to 4 hours";
+			var xdays = "4 to 6 days";
+			var sproutnotes = "Rapini is related to mustard and is popular in Mediterranean cuisine.";
+			var sproutuses = [
+				"Salads and sandwiches",
+				"Stir fries",
+				"Soups, slaws, and more"
+			];
+			var reminderurl = "https://agroage.ca/learn/reminder/generate?category=sprout&plant=rapini";
+			break;
+		}
+	}
+	$('#sproutname').text(sproutname);
+	$('#sproutname2').text(sproutname);
+	$('#soaktime').text(soaktime);
+	$('#xdays').text(xdays);
+	$('#sproutnotes').text(sproutnotes);
+	$('#reminderurl').attr('href',reminderurl);
+	
+	$('#sproutuses').empty()
+	for (i in sproutuses) {
+		$('#sproutuses').append('<li>' + sproutuses[i] + '</li>');
+	}
+});
+</script>
+
+<style>
+@media (min-width:992px) {
+	.flex-width {
+		width:50%;
+		margin:auto;
+	}
+}
+
+ul, ol {
+	margin-bottom: 1rem !important;
+}
+</style>
+</section>
+
+</div>
+
+<html-include src='/assets/common/footer.html' no-shadow="true" mode="cors"></html-include>
+
+</body>
+</html>

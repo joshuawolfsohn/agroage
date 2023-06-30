@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+  <title>Agroage Canada: Indoor Home Gardening Kits</title>
+  <meta name="description" content="Customizable and unique indoor home gardening kits, coming soon to Canada!">
+
+</head>
+
+<header>
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+<script type="module" src="https://unpkg.com/html-include-element"></script>
+<div id="curtain" style="background:white;height:100%;width: 100%;position: fixed;z-index: 9999;top: 0;left: 0;opacity:100%;" class="animated">
+      <div class="col-3" style="margin: auto;justify-content: center;display: flex;top: 50%;scale:2">
+        <div class="snippet" data-title=".dot-pulse">
+          <div class="stage">
+            <div class="dot-pulse"></div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<html-include src="https://agroage.ca/assets/common/header.html" no-shadow="true" mode="cors"></html-include>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" crossorigin="anonymous"></script>
+<script>
+  WebFont.load({
+	google: {
+	  families: ['Quicksand:400,700']
+	}
+  });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="/assets/common/scripts.js"></script>
+</header>
+
+<body onload="reveal()">
+
+<div class="cid-s48MCQYojq mylayout">
+<div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(250, 250, 250);"></div>
+
+<div id="myjumbotron" style="position: relative;background: rgba(255,255,255,0.4);margin-bottom: 2rem;padding-top: 1rem;border-radius: 10px;padding-bottom:0;" class="jumbotron">
+	<button type="button" class="close" aria-label="Close" id="dismissjumbotron">
+	  <span aria-hidden="true">&times;</span>
+	</button>
+	<h5 style="text-align:center">Latest Updates - May 2021</h5>
+	<p class="lead" style="text-align: center;">We are currently putting Agroage on pause while we rework our plan of action and revamp our kits.</p>
+	<script>
+		$('#dismissjumbotron').click(function() {$('#myjumbotron').hide()});
+	</script>
+</div>
+
+<section style="background:transparent;">
+	<script src="https://cdn.jsdelivr.net/gh/adrianklimek/ReplaceMe/dist/replaceme.min.js"></script>
+	<h1 class="mbr-section-title mbr-fonts-style mb-3 display-2 en"><div class="replace-me" style="font-size:1.5em">AFFORDABLE,ORGANIC,FUN,HASSLE-FREE,CONVENIENT,EASY,COMPACT</div> indoor home agriculture for the modern age</h1>
+	<script>
+		var replace = new ReplaceMe(document.querySelector('.replace-me'));
+	</script>
+	
+	<img hidden class="myimg" src="/assets/images/home/microgreenskitchen.jpg" alt="Image of microgreens on a kitchen countertop"/>
+	
+	<p style="text-align:center;display:flex;justify-content:center">Watch our award-winning video from the University of Waterloo Conrad School of Entrepreneurship's Product Video Showcase competition:</p>
+	<video class="myvid" controls>
+	<source src="https://drive.google.com/uc?export=download&id=1SnCESG855Z9v1TxdESqcnLS9HuwXAoLq" type="video/mp4">
+	</video>
+	
+	<style>
+		.myvid {
+			width:100%;
+			margin:auto;
+			display:flex;
+			border-radius:10px;
+			position: relative;
+			border:none;
+		}
+		@media (min-width:992px) {
+			.myvid {
+				width:50%;
+				margin-bottom: 1rem;
+			}
+		}
+	</style>
+	
+</section>
+
+<section style="background:transparent">
+<p class="mbr-text mbr-fonts-style display-7 en">Agroage is a start-up indoor home gardening kit service in the Ottawa region. Our kits help you grow different varieties of sprouts, microgreens, herbs, vegetables, mushrooms, and more, all conveniently delivered to your door!<br></p>                              
+<img hidden class="myimg" src="/assets/images/home/boxatdoor.jpg" alt="Image of a package delivery sitting outside by a door"/>
+</section>
+
+<section id="ig-highlights" style="background:transparent;">
+	<hr>
+	<p class="mbr-text mbr-fonts-style display-5 en">Follow us @agroageca on <a href="https://instagram.com/agroageca" target="_blank">Instagram</a>, <a href="https://facebook.com/agroageca" target="_blank">Facebook</a>, and <a href="https://twitter.com/agroageca" target="_blank">Twitter</a></p>
+	<div id="gallery" class="carousel slide carousel-fade mycarousel lazyfix1" data-ride="carousel">
+	  <div id="ig-carousel" class="carousel-inner myborder" style="border:0;">
+		  <div class='carousel-item active'><img class='d-block w-100' src='151990545_427146465180659_8821105844177780537_n.jpg'></div>
+		  <div class='carousel-item'><img class='d-block w-100' src='148952833_2904412373169739_822347982857732896_n.jpg'></div>
+		  <div class='carousel-item'><img class='d-block w-100' src='156770941_310733117059117_8080023476472022227_n.jpg'></div>
+		  <div class='carousel-item'><img class='d-block w-100' src='163633360_450044589566523_5101512075969026518_n.jpg'></div>
+	  </div>
+	  
+	  <a class="carousel-control-prev" href="#gallery" role="button" data-slide="prev"></a>
+	  <a class="carousel-control-next" href="#gallery" role="button" data-slide="next"></a>
+	</div>
+
+	<style>
+					.mycarousel {
+						width:75%;
+						margin:auto;
+					}
+					@media (min-width: 992px) {
+						.mycarousel {
+							width:25%;
+						}
+					}
+				
+	</style>
+</section>
+
+</div>
+
+<html-include src="https://agroage.ca/assets/common/footer.html" no-shadow="true"></html-include>
+
+</body>
+</html>

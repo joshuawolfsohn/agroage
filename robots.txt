@@ -1,0 +1,13 @@
+User-Agent: *
+Disallow: /assets/
+Disallow: /reminder/
+Disallow: /dev/
+Disallow: /beta/
+Disallow: /community/
+Disallow: /404.html
+Disallow: /401.html
+Disallow: /about/contact/
+Disallow: /order/
+Disallow: /learn/
+
+Sitemap: https://agroage.ca/sitemap.xml

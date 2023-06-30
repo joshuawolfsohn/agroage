@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  
+  <title>Shop | Agroage Canada</title>
+  <meta name="description" content="Customizable and unique indoor home gardening kits, coming soon to Canada!">
+   
+</head>
+
+<header>
+<script src="https://unpkg.com/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+<script type="module" src="https://unpkg.com/html-include-element"></script>
+<div id="curtain" style="background:white;height:100%;width: 100%;position: fixed;z-index: 9999;top: 0;left: 0;opacity:100%;" class="animated">
+      <div class="col-3" style="margin: auto;justify-content: center;display: flex;top: 50%;scale:2">
+        <div class="snippet" data-title=".dot-pulse">
+          <div class="stage">
+            <div class="dot-pulse"></div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<html-include src="/assets/common/header.html" no-shadow="true" mode="cors"></html-include>
+<script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js" crossorigin="anonymous"></script>
+<script>
+  WebFont.load({
+	google: {
+	  families: ['Quicksand:400,700']
+	}
+  });
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<script src="/assets/common/scripts.js"></script>
+</header>
+
+<body onload="reveal()">
+
+<section class="mylayout" id="header1-f" style="background-image:url('/assets/images/bg/jen-theodore-Tys0QOcdbBA-unsplash.jpg');">
+<div class="mbr-overlay" style="background-color: rgb(250, 250, 250);opacity:0.75"></div>
+    
+	<div class="align-center container">
+	
+			<h1 class="mbr-section-title mbr-fonts-style mb-3 display-2 en align-center">Shop</h1>
+			<p class="align-center">Browse our growing number of indoor home gardening kits</p>
+			<div class="shopgrid">
+			<a hidden href="sprouting-blowout">
+              <img alt="Image of Sprouting Kit" style="border-radius:10px" src="/shop/sprouting-blowout/sale-img.jpg">
+              <div class="product_details">
+                <div>Sprouting Mix'n'Match Blowout</div>
+                <p class="mbr-text mbr-fonts-style display-7 en step-title" id="order-total" style="font-weight:bold">$6.99</p>
+              </div>
+            </a>
+            <a href="sprouting-kit">
+              <img alt="Image of Sprouting Kit" style="border-radius:10px" src="/shop/sprouting-kit/sprouting-kit.jpg">
+              <div class="product_details">
+                <div>Sprouting Kit</div>
+				<div>Currently Unavailable</div>
+                <p hidden class="mbr-text mbr-fonts-style display-7 en step-title" id="order-total"><del style="color:grey">$19.99</del> <text style="color:red">$13.99 (30% OFF)</text></p>
+              </div>
+            </a>
+        
+            <a>
+              <img alt="Image of Microgreens Kit" style="border-radius:10px" src="/shop/microgreens-kit/buckwheat.jpg">
+              <div class="product_details">
+				<div>Microgreens Kit</div>
+				<div>Currently Unavailable</div>
+              </div>
+            </a>
+        
+			</div>
+			
+			<hr>
+			
+			<div class="shopgrid">
+			  <a hidden>
+              <img alt="Image of Sprouting Seeds" style="border-radius:10px" src="https://images.bigcartel.com/missing.png?auto=format&amp;fit=max&amp;w=1200">
+              <div class="product_details">
+                <div>Sprouting Seeds</div>
+                <div>Currently Unavailable</div>
+              </div>
+			  </a>
+			  <a hidden>
+              <img alt="Image of Microgreen Pods" style="border-radius:10px" src="https://images.bigcartel.com/missing.png?auto=format&amp;fit=max&amp;w=1200">
+              <div class="product_details">
+                <div>Microgreen Pods</div>
+                <div>Currently Unavailable</div>
+              </div>
+			  </a>
+			  <a>
+              <img alt="Image of Mushroom Kit" style="border-radius:10px" src="https://images.bigcartel.com/missing.png?auto=format&amp;fit=max&amp;w=1200">
+			  <div class="product_details">
+				<div>Mushroom Kit</div>
+				<div>Coming Soon</div>
+              </div>
+            </a>
+			  <a>
+              <img alt="Image of Merch" style="border-radius:10px" src="merchhat.jpg">
+              <div class="product_details">
+                <div>Merch</div>
+                <div>Currently Unavailable</div>
+              </div>
+			  </a>
+			</div>
+	  
+    </div>
+	<style>
+		.product_details div:nth-child(1) {
+			font-family: 'Quicksand',sans-serif;
+			font-weight: 700;
+			font-size:1.5rem;
+		}
+		
+		@media (min-width:992px) {
+			.shopgrid {
+			grid-template-columns:repeat(2,1fr) !important;
+			width:50vw;
+			}
+		}
+	</style>
+</section>
+
+<html-include src='/assets/common/footer.html' no-shadow="true" mode="cors"></html-include>
+
+</body>
+</html>
